@@ -1,0 +1,9 @@
+{
+	"Name": "Oracle SQL Injection-4",
+	"Description": "10g ACTIVATE_SUBSCRIPTION - PL/SQL의 Oracle DBMS_CDC_SUBSCRIBE package 내의 ACTIVATE_SUBSCRIPTION프로시저에서 입력된 값을 올바르게 처리하지 못하여 발생",
+	"References": [""],
+	"Samples": [
+		""],
+	"Keywords": [],
+	"Signature": []
+}

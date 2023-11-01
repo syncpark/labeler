@@ -1,0 +1,11 @@
+{
+	"Name": "WordPress SQL Injection-4",
+	"Description": "Wpdb_prepare\n- Wordpress 4.8.2 이전 버전은  wpdb-> prepare에서 % 문자와 추가 자리 표시자의 값을 잘못 처리\n- edit.php에서 _thumbnail_id 를 통해 악성 Query를 전송하면 입력 데이터에 대한 기능 검사 부족으로 악성 행위가 진행됩니다",
+	"References": ["CVE-2017-14723"],
+	"Samples": [
+		"GET /wp-admin/edit.php?action=delete&_wpnonce=xxx&ids=55%20%1$%s HTTP/1.1",
+		"GET /wp-admin/edit.php?action=delete&_wpnonce=xxx&ids=55%20%1$%s%20or%20sleep(10) HTTP/1.1",
+		"GET /wordpress/wp-admin/upload.php?_wpnonce=daab7cfabf&action=delete&media%5B%5D=5%20%251%24%25s%20hello HTTP/1.1"],
+	"Keywords": [["wp-admin", "edit\\.php", "_wpnonce"], ["wordpress", "upload\\.php", "_wpnonce"]],
+	"Signature": []
+}

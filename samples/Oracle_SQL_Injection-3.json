@@ -1,0 +1,9 @@
+{
+	"Name": "Oracle SQL Injection-3",
+	"Description": "10g DBMS_METADAT.GET_DDL - PL/SQL의 DBMS_METADAT package 내의 GET_DDL프로시저에서 입력된 값을 올바르게 처리하지 못하여 발생",
+	"References": ["CVE-2006-0283", "CVE-2006-0270", "CVE-2006-0265", "CVE-2005-2378", "CVE-2005-2371", "CVE-2005-2093", "CVE-2005-0873"],
+	"Samples": [
+		""],
+	"Keywords": [],
+	"Signature": []
+}

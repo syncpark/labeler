@@ -1,0 +1,9 @@
+{
+	"Name": "Joomla SQL Injection-2",
+	"Description": "User Notes\n- filter[category_id] HTTP 매개 변수의 입력 값에 대한 유효성 검사 부족으로 인해 발생\n- 악의적으로 조작된 SQL 쿼리문을 포함한 요청문을 보냄으로 공격가능\n- 내부 데이터베이스(DB) 서버의 데이터를 유출 및 변조하고 관리자 인증을 우회",
+	"References": ["CVE-2018-8045"],
+	"Samples": [
+		"POST /joomla/administrator/index.php?option=com_users&view=notes HTTP/1.1\nfilter%5Bcategory_id%5D=7+AND+ascii(substring((SELECT+concat(1,password,0x2F)+from+#__users+limit+0,1),2,1))>31&"],
+	"Keywords": [["joomla"], ["filter", "category_id"]],
+	"Signature": []
+}

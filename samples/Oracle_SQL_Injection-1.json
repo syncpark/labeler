@@ -1,0 +1,9 @@
+{
+	"Name": "Oracle SQL Injection-1",
+	"Description": "9i/10g DBMS_AQ.ENQUEUE - PL/SQL의 DBMS_AQpackage 내의 ENQUEUE프로시저에서 입력된 값을 올바르게 처리하지 못하여 발생",
+	"References": ["CVE-2007-0268", "CVE-2006-4343", "CVE-2006-4339", "CVE-2006-3738", "CVE-2006-2940", "CVE-2001-0729"],
+	"Samples": [
+		""],
+	"Keywords": [],
+	"Signature": []
+}

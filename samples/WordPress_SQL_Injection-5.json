@@ -1,0 +1,9 @@
+{
+	"Name": "WordPress SQL Injection-5",
+	"Description": "Slideshow plugin admin-ajax.php\n- Slideshow 플러그인은 슬라이드 쇼를 통합하는 쉬운 방법을 제공 (이미지를 슬라이드쇼로 불러옴)\n- GBgallery.php파일 안에 존재하는 WordPress용 Slideshow plugin 1.5가 매개 변수를 적절히 필터링 하지 못해 발생\n- 원격의 공격자는 취약점을 공격하기 위해 wb-admin/admin-ajax.php로 접근 수행\n- action=gb_ajax_get_group&gb_nonce=5356513fbe&selected_group=[SQL_Injection] 페이로드 구문을 이용해 공격 수행",
+	"References": ["CVE-2014-8375"],
+	"Samples": [
+		"POST /wordpress/wp-admin/admin-ajax.php HTTP/1.1\nUser-agent: sqlmap/1.0-dev-5b2ded0 (http://sqlmap.org)\naction=gb_ajax_get_group&gb_nonce=5356513fbe&selected_group="],
+	"Keywords": [],
+	"Signature": []
+}

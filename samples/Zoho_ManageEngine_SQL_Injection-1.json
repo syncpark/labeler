@@ -1,0 +1,9 @@
+{
+	"Name": "Zoho ManageEngine SQL Injection-1",
+	"Description": "addMailServerSettings\n- /api/json/v1/admin/ConfigureMailServerSettings URI에 HTTP Request를 전달할 때 처리되는 mailservername의 매개변수를 적절하게 검증하지 않기 때문에 발생\n- HTTP Request를 조작하여 취약점을 악용할 수 있고, 악용에 성공하면 임의 코드가 실행\n- Content-Disposition: form-data; name=mailserverport에서 SQL Injection을 위한 싱글쿼터(')가 포함되어 있는 문자열에서 추출\n- HTTP Body가 아닌 URI의 mailserverport 파라미터에도 취약점이 존재한다. 하지만 문자열 길이가 짧다는 점으로 인해서 honeynet에서 모니터링 중, 공격 탐지시 추가 릴리즈 예정",
+	"References": ["CVE-2018-18949"],
+	"Samples": [
+		"POST /api/json/v2/admin/ConfigureMailServerSettings?apiKey=106c7fa48fe27b21f14e0cdc361a674a HTTP/1.1\n...\nContent-Disposition: form-data; name=mailservername,','4','b','b','B','B','0','L','L','0','B');CREATE TABLE dbo.poc(code INT);"],
+	"Keywords": [["\\/api\\/json\\/v1\\/admin\\/ConfigureMailServerSettings", "Content-Disposition", "form-data", "CREATE", "TABLE", "dbo\\.poc\\(code INT\\)"]],
+	"Signature": []
+}

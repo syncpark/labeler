@@ -1,0 +1,11 @@
+{
+        "Name": "ECshop user.php SQL Injection",
+        "Description": "-  기업 및 개인이 맞춤형 온라인 상점을 신속하게 구축 할 수있는 PHP, MySQL 기반 B2C 독립 온라인 스토어 시스템 \n -  user.php에서 $back_act 매개변수가 http referer의 검증을 제대로 처리하지 않아 발생\n -  악의적으로 조작된 HTTP Request를 통해서 SQL Injecion 공격을 진행 \n 공격 흐름 \n ① user.php의 $back_act 매개변수\n ② cls_template.php의 display()\n ③ lib_insert.php의 insert_mod()\n ④ lib_insert.php의 insert_ads()\n ⑤ cls_template.php의 fetch() 내부의 eval을 통해서 SQL 실행",
+        "References": [],
+        "Samples": [
+			"GET /user.php?act=login HTTP/1.1"
+		   ],
+        "Keywords": [["user.php"]],
+        "Signature": []
+}
+

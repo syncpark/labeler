@@ -1,0 +1,9 @@
+{
+	"Name": "Zoho ManageEngine SQL Injection-2",
+	"Description": "setManaged\n- /api/json/device/setManaged로 시작하는 HTTP POST 요청을 받으면 setManaged() 메서드가 호출되어 처리하는데 name 매개 변수의 유효성을 적절하게 검증하지 않아 발생\n- 악용에 성공하면 임의의 SQL 코드를 실행\n- SQL Injection 공격을 진행하기 위해서는 인증이 필요하지만, CVE-2018-17283(sql injection, authentication bypass exists) 취약점에서 apiKey 매개변수를 이용한 인증 우회 취약점이 존재하고, default password가 admin admin으로 지정됨",
+	"References": ["CVE-2018-17283"],
+	"Samples": [
+		"POST /api/json/device/setManaged?apiKey=43db3314d84e0db17b9fbe99ef9c9d39&manage=false HTTP/1.1\n...\nname=anything%27%3BCREATE%20TABLE%20poc(code%20INT)%3B--"],
+	"Keywords": [["/api/json/device/setManaged"], ["CREATE", "TABLE", "poc\\(code%20INT\\)"]],
+	"Signature": []
+}

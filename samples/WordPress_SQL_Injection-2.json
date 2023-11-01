@@ -1,0 +1,9 @@
+{
+	"Name": "WordPress SQL Injection-2",
+	"Description": "Mail Masta Plugin filter_list\n- /inc/lists/view-list.php 파일의 알려지지 않은 함수에서 취약점이 발생 filter_list 인자 값으로 공격 가능\n- 공격 성공 시, 정보 유출 및 정보 변경이 가능",
+	"References": ["CVE-2017-6096"],
+	"Samples": [
+		""],
+	"Keywords": [],
+	"Signature": []
+}

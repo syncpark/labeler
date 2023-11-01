@@ -1,0 +1,10 @@
+{
+        "Name": "Nelson ERP data.xml SQL Injection ",
+        "Description": "-   오픈소스로 만들어진 ERP로 모든 OS를 지원하며, 재고관리, 배송 및 결제, 견전 주문등 다수의 기능 사용이 가능 \n -  db/utils/query/data.xml URL을 요청 할 때 query 변수에 대해 적절한 검증이 존재하지 않아 발생 \n  -   공격 성공 시, DB Name 과 version 획득이 가능",
+        "References": [],
+        "Samples": [
+			"POST /db/utils/query/data.xml HTTP/1.1"
+		   ],
+        "Keywords": [["/db/utils/query/data.xml"],["query"]],
+        "Signature": []
+}

