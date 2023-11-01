@@ -1,0 +1,8 @@
+{
+        "Name": "SIP Vulnerablility Scanner(Sipvicious)",
+        "Description": "-인터넷에 연결되어 있는 모든 장비를 검색해서 그 중에 인터넷 전화기나 PBX(기업용 전화)시스템을 찾아내기 위한 시도\n-이 후에 취약한 암호를 이용하여 국제전화번호나 프리미엄 번호에 전화를 걸어 과금 유도\n-5079 포트를 통해서 137.74.202.229 SIP의 계정번호가 맞는지 테스트 (Voip는 보통 5060, 5061 포트사용)\n-User_Agent 항목에 friendly-scanner가 명시됨",
+        "References": [],
+        "Samples": ["Ûÿ AÒaúYE¶Âó@5ÜhîÜ1yæ×Ä¢ÕÒINVITE sip:100@121.157.230.2 SIP/2.0\nVia: SIP/2.0/UDP 34.250.90.28:5079;branch=z9hG4bK-1199866471;rport\nContent-Length: 0\nFrom: sipvicious<sip:100@1.1.1.1>;tag=3739396465363032313363340131313734313533393033\nAccept: application/sdp\nUser-Agent: friendly-scanner\nTo: sipvicious<sip:100@1.1.1.1>\nContact: sip:100@34.250.90.28:5079\nCSeq: 1 INVITE\nCall-ID: 210222260901823778112960\nMax-Forwards: 70"],
+        "Keywords": [],
+        "Signature": []
+}

@@ -1,0 +1,11 @@
+{
+        "Name": "Schneider Electric U.motion Builder SQL Injection-2",
+        "Description": "-   track_import_export.php를 통해 전달되는 object_id 매개변수를 적절하게 검증하지 않아 발생\n-   벤더사에 해당 소프트웨어에 대한 지원을 중단하였으므로, 다른 소프트웨어를 사용\n",
+        "References": ["CVE-2018-7841"],
+        "Samples": [
+			"POST /smartdomuspad/modules/reporting/track_import_export.php HTTP/1.1"
+		   ],
+        "Keywords": [["track_import_export.php"],["object_id"]],
+        "Signature": []
+}
+

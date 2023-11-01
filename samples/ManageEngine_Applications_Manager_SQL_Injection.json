@@ -1,0 +1,9 @@
+{
+	"Name": "ManageEngine Applications Manager SQL Injection",
+	"Description": "- 비즈니스 응용 프로그램을 사전에 모니터링하는 웹 기반의 실시간 응용 프로그램 성능 모니터링 프로그램\n- MenuHandlerServlet으로 전달되는 config_id 파라미터 값을 제대로 검증하지 않아 발생\n- 공격 성공 시, SQL 문을 실행",
+	"References": ["CVE-2016-9488"],
+	"Samples": [
+		"POST /servlet/MenuHandlerServlet?action=verticalmenulist&config_id=1%3bcreate%20table%20aaa(code%20int)%3b-- HTTP/1.1"],
+	"Keywords": [["MenuHandlerServlet", "config_id", "(code%20int)"]],
+	"Signature": []
+}

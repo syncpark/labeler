@@ -1,0 +1,8 @@
+{
+        "Name": "DedeCMS SQL Injection-1",
+        "Description": "-   컨텐츠 출판, 편집 및 관리 검색을 하나로 통합 한 중국에서 사용되는 PHP 기반 오픈 소스 CMS\n search.php\n -   search.php에서 typeArr 매개변수를 통해 전달되는 값을 적절하게 검증하지 않았기 때문에 발생\n -   악용에 성공하면 DB 사용자 계정, 암호가 노출된다",
+        "References": [],
+        "Samples": ["GET /missing.html HTTP/1.1"],
+        "Keywords": [["search.php"],["typeArr"]],
+        "Signature": []
+}

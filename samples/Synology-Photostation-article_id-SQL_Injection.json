@@ -1,0 +1,10 @@
+{
+        "Name": "Synology Photostation article_id SQL Injection",
+        "Description": "-  인터넷을 통해 Synology NAS에 저장된 사진을 정리하고 볼 수 있도록 고안된 웹 기반 응용 프로그램\n-   label.php 에서 article_id 매개변수를 통해 전달되는 값을 적절하게 검증하지 않았기 때문에 발생",
+        "References": [],
+        "Samples": [
+			"POST /photo/include/blog/label.php HTTP/1.1"
+		   ],
+        "Keywords": [["label.php"],["article_id"]],
+        "Signature": []
+}

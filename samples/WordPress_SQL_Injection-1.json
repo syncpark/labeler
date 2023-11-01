@@ -1,0 +1,9 @@
+{
+	"Name": "WordPress SQL Injection-1",
+	"Description": "Mail Masta Plugin list_id\n- inc/lists/cscexport.php 파일의 알려지지 않은 함수에서 취약점 발생, 공격 시 list_id 인자 값으로 공격 가능\n- 공격 성공 시, 정보 유출 및 정보 변경 가능",
+	"References": ["CVE-2017-6095"],
+	"Samples": [
+		""],
+	"Keywords": [],
+	"Signature": []
+}

